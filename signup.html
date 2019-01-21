@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/home/qainfotech/index2.css">
+<img src="/home/qainfotech/qa.jpg"  alt="qainfotech" height="85" width="25%">
+<title>SignUp Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:LemonChiffon ">
+
+<center>
+<h1>SignUp</h1>
+<div>
+<form  action="/home/qainfotech/home.html"  method = "post" >
+<label>First Name</label><br>
+<input type = "text" size="30" style="width:70%" name = "name"required/><br><br>
+<label>Address</label><br>
+<input type = "textarea"size="30" style="width:70%" rows="4" cols="500" name = "address"/><br><br>
+<label>Email-ID</label><br>
+<input type = "email" size="30" style="width:70%" name = "email" required/></br></br>
+<label>Passowrd</label><br>
+<input type = "password"size="30" style="width:70%" id = "pass" name = "password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/></br></br>
+<label>Confirm Password</label><br>
+<input type = "password" size="30" style="width:70%" name = "password" id = "cnfpass" required/></br></br>
+<label>Gender</label><br>
+<input type="radio" name="gender" value="male" > Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other<br><br>
+<label>Date of Birth</label><br>
+<input type = "date" size="30" style="width:70%" name = "date"/><br><br>
+<label>Mobile Number</label><br>
+<input type = "number" size="30" style="width:70%" name = "mob"/> <br><br>
+<label>Languages Known</label><br>
+<input type="checkbox" name="java" value="Java"> Java
+<input type="checkbox" name="python" value="Python"> Python
+<input type="checkbox" name="php" value="PHP" > PHP<br><br>
+<label>Country</label><br>
+<select style="width:70%" > 
+  <option value="india">INDIA</option>
+  <option value="china">CHINA</option>
+  <option value="us">USA</option>
+  <option value="uk">UK</option>
+</select><br><br>
+<input type = "submit" style="width:70%" value = "Login" onclick="return Validate()" formaction="/home/qainfotech/home.html"/>
+
+</form>
+</div>
+ <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("pass").value;
+        var confirmPassword = document.getElementById("cnfpass").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
